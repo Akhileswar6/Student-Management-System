@@ -1,0 +1,187 @@
+:root {
+    --primary-color: #2c3e50;  /* Dark Blue */
+    --secondary-color: #3498db; /* Bright Blue */
+    --accent-color: #e74c3c;  /* Red */
+    --light-bg: #f9f9f9;
+    --border-radius: 10px;
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Body Styling */
+/* Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 30px;
+    background: linear-gradient(135deg, #a29bfe, #74b9ff); /* Light Violet to Soft Blue Gradient */
+    color: var(--primary-color);
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    background: linear-gradient(135deg, #3498db, #2c3e50); /* Blue Gradient */
+    box-shadow: var(--box-shadow);
+    margin-bottom: 30px;
+    color: white;
+    text-align: left;
+}
+
+/* Common Section Styling */
+.section {
+    background: linear-gradient(135deg, #dfe6e9, #b2bec3); /* Soft Gray Gradient */
+    border-radius: var(--border-radius);
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: var(--box-shadow);
+    border-left: 5px solid var(--secondary-color);
+}
+
+/* Section Heading */
+.section h3 {
+    color: white;
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Dark Gradient */
+    padding: 12px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* Specific Section Colors */
+.Studentdetails,
+.Academicdetails,
+.Addressdetails,
+.Student1details,
+.Student2details,
+.Fatherdetails,
+.Motherdetails {
+    background: linear-gradient(135deg, #bdc3c7, #ecf0f1); /* Light Gradient */
+    border-left: 5px solid var(--secondary-color);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+
+
+/* Specific Background Colors for h3 in Sections */
+.Studentdetails h3,
+.Academicdetails h3,
+.Addressdetails h3,
+.Student1details h3,
+.Student2details h3,
+.Fatherdetails h3,
+.Motherdetails h3 {
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Dark Gradient for h3 */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 1em; 
+    line-height: 1.4;
+}
+
+/* Input Fields */
+.form-tag {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.tag {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+    font-size: 0.9em;
+}
+
+input, select, textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(74, 123, 156, 0.2);
+    outline: none;
+}
+
+/* Buttons */
+button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.submit-btn {
+    background: linear-gradient(to right, #27ae60, #219a52);
+    color: white;
+    margin-right: 15px;
+}
+
+.reset-btn {
+    background: linear-gradient(to right, #e74c3c, #c0392b);
+    color: white;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Confirmation Message */
+.confirmation-message {
+    background: linear-gradient(135deg, #bdc3c7, #ecf0f1);
+    border-left: 4px solid var(--secondary-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Preview Image */
+.preview-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: 2px solid #ddd;
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        margin: 15px;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}

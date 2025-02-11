@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <link rel="website icon" type="png" href="form.png">
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <center>
+        <div class="logo-container">
+            <a href="https://svce.edu.in/"><img src="https://svce.edu.in/images/svcelogo.png" height="90" alt="SVCE"></a>
+            <div class="text-container">
+                <h2 class="main-heading">SRI VENKATESWARA COLLEGE OF ENGINEERING</h2>
+                <p class="sub-heading">Karakambadi Road, Tirupati - 517507, Andhra Pradesh,<br>(AUTONOMOUS - Accredited by NBA&NAAC, Affiliated to JNTUA)</p>
+            </div>
+        </div>
+    </center>
+    
+    <div class="Studentdetails">
+        <form action="/post" method="post">
+        <h3>Student Personal Details</h3>
+        <div class="form-tag">
+
+            <div class="tag">
+                <label for="name">Student Name</label>
+                <input type="text" id="name"  name ="name" placeholder="Enter your Name" required>
+            </div>
+
+            <div class="tag">
+                <label for="phone">Contact No</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter Contact Number" required>
+            </div>
+        
+            <div class="tag">
+                <label for="email">Email-id</label>
+                <input type="email" id="email" name="email" placeholder="Enter Mail-id" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+            </div>
+
+            <div class="tag">
+                <label for="DOB">Date of Birth</label>
+                <input type="date" id="DOB" name="DOB" required>
+            </div>
+            
+            <div class="tag">
+                <label for="Gender" >Gender</label>
+                <select name="Gender" id="Gender" required>
+                    <option value="">--Select--</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="tag">
+                <label for="Caste">Caste</label>
+                <select id="Caste" name="Caste" required>
+                    <option value="">--Select--</option>
+                    <option value="General">General</option>
+                    <option value="General">OBC</option>
+                    <option value="General">BC</option>
+                    <option value="General">SC</option>
+                    <option value="General">ST</option>
+                    <option value="Genera">Other</option>
+                </select>
+            </div>
+        
+            <div class="tag">
+                <label for="Religion">Religion</label>
+                <input type="text" id="Religion" name="Religion" placeholder="Enter your Religion" required>
+            </div>
+        
+            <div class="tag">
+            <label for="Aadharno">Aadhar Number</label>
+            <input type="text" id="Aadharno" name="Aadharno" pattern="\d{12}" placeholder="Enter 12-digit Aadhar" maxlength="12" required>
+            </div>
+
+            <div class="tag">
+            <label for="BankAccount">Bank Account Number</label>
+            <input type="text" id="BankAccount" name="BankAccount" pattern="\d{9,18}" placeholder="Enter Bank Account " maxlength="18" required>
+            </div>
+
+            <div class="tag">
+            <label for="bloodGroup">Blood Group</label>
+            <select id="bloodGroup" name="bloodGroup" required>
+                <option value="">--Select--</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </select>
+            </div>
+        
+            <div class="tag">
+                <label for="photo">Upload Photo</label>
+                <input type="file" id="photo" name="photo" required>
+                <img id="preview1" style="display: none; width: 100px; margin-top: 10px;">
+            </div>
+            <script>
+                document.getElementById("file1").addEventListener("change", function(event) {
+                    const file1 = event.target.files[0];
+                    if (file1) {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            const img = document.getElementById("preview1");
+                            img.src = e.target.result;
+                            img.style.display = "block";
+                        };
+                        reader.readAsDataURL(file1);
+                    }
+                });
+            </script>
+        </div>
+    </div>
+
+    
+
+    <div class="Academicdetails">
+        <h3>Student Academic Details</h3>
+        <div class="form-tag">
+
+            <div class="tag">
+                <label for="Course">Course</label>
+                <select id="Course" name="Course" required>
+                    <option value="">--Select--</option>
+                    <option value="BTech">Bachelor of Technology (BTech)</option>
+                    <option value="MTech">Master of Technology (MTech)</option>
+                    <option value="MBA">Master of Business Administration (MBA)</option>
+                    <option value="MCA">Master of Computer Applications (MCA)</option>
+                    <option value="PhD">Doctor of Philosophy (PhD)</option>
+                </select>
+            </div>
+
+            <div class="tag">
+                <label for="Branch">Branch</label>
+                <select id="Branch" name="Branch" required>
+                    <option value="">--Select--</option>
+                    <option value="CSE">Computer Science and Engineering (CSE)</option>
+                    <option value="AIML">Artificial Intelligence & Machine Learning (AIML)</option>
+                    <option vaule="Cyber">Cyber Security (CS)</option>
+                    <option value="DS">Data Science (DS)</option>
+                    <option value="IT">Information Technology (IT)</option>
+                    <option value="ECE">Electronics & Commnuication Engineering (ECE)</option>
+                    <option value="EEE">Electrical Electronics Engineering (EEE)</option>
+                    <option value="MECH">Mechanical (MECH)</option>
+                    <option value="CIVIL">Civil (CIV)</option>
+                </select>
+            </div>
+
+            <div class="tag">
+                <label for="Section">Section</label>
+                    <select id="Section" name="Section" required>
+                        <option name="">--Select--</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                        <option value="F">F</option>
+                        <option value="G">G</option>
+                        <option value="H">H</option>
+                    </select>
+            </div>
+
+            <div class="tag">
+                <label for="Studentid">Student Roll.No</label>
+                <input type="text" id="Studentid" name="Studentid" placeholder="Ex:23BFA37131" maxlength="10" required>
+            </div>
+
+            <div class="tag">
+                <label for="AdmissionNumber">Admission Number</label>
+                <input type="text" id="AdmissionNumber" name="AdmissionNumber" placeholder="Ex:14236" maxlength="5" required>
+            </div>
+
+            <div class="tag">
+                <label for="batch">Batch</label>
+                <input type="text"id="batch" name="batch" placeholder="Ex:2021-2025" required>
+            </div>
+
+            <div class="tag">
+                <label for="DOA">Date of Admission</label>
+                <input type="date" id="DOA" name="DOA">
+            </div>
+        </div>
+    </div>
+
+    <div class="Addressdetails">
+        <h3>Address Details</h3>
+        <div class="form-tag">
+            
+            <div class="tag">
+                <label for="Country">Country</label>
+                <input type="text" id="Country" name="Country" placeholder="Enter your Country" required>
+            </div>
+
+            <div class="tag">
+                <label for="State">State</label>
+                <input type="text" id="State" name="State" placeholder="Enter your State" required>
+            </div>
+
+            <div class="tag">
+                <label for="District">District</label>
+                <input type="text" id="District" name="District" placeholder="Enter your District" required>
+            </div>
+
+            <div class="tag">
+                <label for="City">City</label>
+                <input type="text" id="City" name="City" placeholder="Enter your City" required>
+            </div>
+            
+            <div class="tag">
+                <label for="Town">Town</label>
+                <input type="text" id="Town" name="Town" placeholder="Enter your Town" required>
+            </div>
+
+            <div class="tag">
+                <label for="Village">Village</label>
+                <input type="text" id="Village" name="Village" placeholder="Enter your Village">
+            </div>
+
+            <div class="tag">
+                <label for="Pincode">Pincode</label>
+                <input type="text" id="Pincode" name="Pincode" placeholder="Enter your Pincode" required>
+            </div>
+
+            <div class="tag">
+                <label for="Doorno">Door/Flat.No</label>
+                <input type="text" id="Doorno" name="Doorno" placeholder="Enter your Door/Flat.No" required>
+            </div>
+
+            <div class="tag">
+                <label for="PermanentAddress">Permanent Address</label>
+                <textarea id="PermanentAddress" name="PermanentAddress" cols="40" rows="2" placeholder="Permanent Address as per Aadhar" required></textarea>
+            </div>
+
+            <div class="tag">
+                <label for="CorrespondenceAddress">Correspondence Address</label>
+                <textarea id="CorrespondenceAddress" name="CorrespondenceAddress"cols="40" rows="2" placeholder="Correspondence Address" required></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="Student1details">
+        <h3>Student 10<sup>th</sup> Details</h3>
+        <div class="form-tag">
+
+            <div class="tag">
+                <label for="Name1">Student Name</label>
+                <input type="text" id="Name1" name="Name1" placeholder="Enter your Name" required>
+            </div>
+
+            <div class="tag">
+                <label for="SchoolName">School Name</label>
+                <input type="text" id="SchoolName" name="SchoolName" placeholder="Enter School Name" required>
+            </div>
+
+            <div class="tag">
+                <label for="sschallticketno">SSC Hall Ticket.no</label>
+                <input type="number" id="sschallticketno" name="sschallticketno" placeholder="Ex:2120122437" required>
+            </div>
+
+            <div class="tag">
+                <label for="Syllabus">Education Board</label>
+                <input type="text"id="Syllabus" name="Syllabus" placeholder="Ex:CBSE, SSC" required>
+            </div>
+
+            <div class="tag">
+                <label for="Passed">Year of Passing</label>
+                <input type="number" id="Passed" name="Passed" placeholder="Ex:2021" maxlength="4" required>
+            </div>
+
+            <div class="tag">
+                <label for="percentage">Percentage</label>
+                <input type="number" id="percentage" name="percentage" placeholder="Ex:9" required>
+            </div>
+
+            <div class="tag">
+                <label for="SchoolAddress1">School Address</label>
+                <textarea id="SchoolAddress" name="SchoolAddress" cols="40" rows="2" placeholder="Enter your School Address"></textarea>
+            </div>
+
+            <div class="tag">
+                <label for="sscmarksheet">Upload SSC Marklist</label>
+                <input type="file" id="sscmarksheet" name="sscmarksheet" required>
+                <img id="preview2" style="display: none; width: 100px; margin-top: 10px;">
+            </div>
+            <script>
+                document.getElementById("file2").addEventListener("change", function(event) {
+                    const file2 = event.target.files[0];
+                    if (file2) {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            const img = document.getElementById("preview2");
+                            img.src = e.target.result;
+                            img.style.display = "block";
+                        };
+                        reader.readAsDataURL(file2);
+                    }
+                });
+            </script>
+        </div>
+    </div>
+    
+    <div class="Student2details">
+    <h3>Student Diploma/Inter Details</h3>
+        <div class="form-tag">
+
+            <div class="tag">
+                <label for="Name2">Student Name</label>
+                <input type="text" id="Name2" name="Name2" placeholder="Enter your Name" required>
+            </div>
+
+            <div class="tag">
+                <label for="CollegeName">College Name</label>
+                <input type="text" id="CollegeName" name="CollegeName" placeholder="Enter College Name" required>
+            </div>
+
+            <div class="tag">
+                <label for="diphallticketno">Diploma/Inter Hall Ticket.no</label>
+                <input type="number" id="diphallticketno" name="diphallticketno" placeholder="Ex:21441-CM-044" required>
+            </div>
+
+            <div class="tag">
+                <label for="Syllabus1">Education Board</label>
+                <input type="text" id="Syllabus1" name="Syllabus1" placeholder="Ex:SBTET, BOI" required>
+            </div>
+
+            <div class="tag">
+                <label for="Passed1">Year of Passing</label>
+                <input type="number" id="Passed1" name="Passed1" placeholder="Ex:2023" maxlength="4" required>
+            </div>
+            
+            <div class="tag">
+                <label for="percentage1">Percentage</label>
+                <input type="number" id="percentage1" name="percentage1" placeholder="Ex:82" required>
+            </div>
+
+            <div class="tag">
+                <label for="collegeAddress">College Address</label>
+                <textarea id="collegeAddress" id="collegeAddress" name="Name1" cols="40" rows="2" placeholder="Enter your College Address"></textarea>
+            </div>
+
+            <div class="tag">
+                <label for="diplomaMarksheet">Upload Diploma/Inter Marklist</label>
+                <input type="file" id="diplomaMarksheet" name="diplomaMarksheet" required>
+                <img id="preview3" style="display: none; width: 100px; margin-top: 10px;">
+            </div>
+            <script>
+                document.getElementById("file3").addEventListener("change", function(event) {
+                    const file3 = event.target.files[0];
+                    if (file3) {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            const img = document.getElementById("preview3");
+                            img.src = e.target.result;
+                            img.style.display = "block";
+                        };
+                        reader.readAsDataURL(file3);
+                    }
+                });
+            </script>
+        </div>
+    </div>
+
+    <div class="Fatherdetails">
+    <h3>Father's Details</h3>
+        <div class="form-tag">
+
+            <div class="tag">
+                <label for="FathersName">Father's Name</label>
+                <input type="text" id="FathersName" name="FathersName" placeholder="Enter father's name" required>
+            </div>
+
+            <div class="tag">
+                <label for="FatherMoileNumber">Contact Number</label>
+                <input type="tel" id="FatherMoileNumber" name="FatherMoileNumber" placeholder="Contact Number" required>
+            </div>
+
+            <div class="tag">
+                <label for="Aadharno1">Aadhar Number</label>
+                <input type="text" id="Aadharno1" name="Aadharno1" pattern="\d{12}" placeholder="Enter 12-digit Aadhar" maxlength="12" required>
+            </div>
+
+            <div class="tag">
+                <label for="Occupation">Occupation</label>
+                <textarea id="Occupation" name="Occupation" cols="40" rows="2" placeholder="Enter your Father's Occupation" required></textarea>
+            </div>
+
+            <div class="tag">
+                <label for="qualification">Qualification</label>
+                <input type="text" id="qualification" name="qualification" placeholder="Father's Qualification">
+            </div>
+
+            <div class="tag">
+                <label for="email1">Email-id</label>
+                <input type="email" id="email1" name="email1" placeholder="Father's Mail-id">
+            </div>            
+        </div>
+    </div>
+
+    <div class="Motherdetails">
+        <h3>Mother's Details</h3>
+        <div class="form-tag">
+
+            <div class="tag">
+                <label for="MothersName">Mother's Name</label>
+                <input type="text" id="MothersName" name="MothersName" placeholder="Enter mother's name" required>
+            </div>
+
+            <div class="tag">
+                <label for="MothersMobileNumber">Contact Number</label>
+                <input type="tel" id="MothersMobileNumber" name="MothersMobileNumber" placeholder="Contact Number" required>
+            </div>
+
+            <div class="tag">
+                <label for="Aadharno2">Aadhar Number</label>
+                <input type="text" id="Aadharno2" name="Aadharno2" pattern="\d{12}" placeholder="Enter 12-digit Aadhar" maxlength="12" required>
+            </div>
+
+            <div class="tag">
+                <label for="email2">Email-id</label>
+                <input type="email" id="email2" name="email2" placeholder="Mother's Mail-id">
+            </div>
+
+            <div class="tag">
+                <label for="Occupation1">Occupation</label>
+                <textarea id="Occupation1" name="Occupation1" cols="40" rows="2" placeholder="Enter your Mother's Occupation" required></textarea>
+            </div>
+
+            <div class="tag">
+                <label for="qualification1">Qualification</label>
+                <input type="text" id="qualification1" name="qualification1" placeholder="Mother's Qualification">
+            </div>
+            
+            <div class="tag">
+                <label for="BankAccount1">Joint Account Number</label>
+                <input type="text" id="BankAccount1" name="BankAccount1" pattern="\d{9,18}" placeholder="Enter Joint Account " maxlength="18" required>
+            </div>
+        </div>
+    </div>
+
+    <div class="confirmationmessage">
+        <input type="checkbox" id="confirm" onchange="toggleSubmit()">
+        <label for="confirm">
+            <strong style="font-size: 15px; color: var(--primary-color);">⚠️ Please confirm</strong><br>
+            <span style="font-size: 14px;">I verify that all information provided is accurate</span>
+        </label>
+    </div>
+    
+    <center>
+        <div class="btn-container">
+            <button type="reset" class="reset-btn" id="reset-btn" name="reset-btn">Reset Form</button>
+            <button type="submit" class="submit-btn" id="submitBtn" name="submitBtn">Submit Application</button>
+        </div>
+    </center>
+
+</form>
+
+</body>
+</html>
