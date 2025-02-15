@@ -1,17 +1,39 @@
 const express = require('express')
+const dotEnv = require('dotenv')
+const {MongoClient} = require('mongodb')
+
 const mongoose = require('mongoose')
-const path = require('path')
-const port = .3012
-
 const app = express()
-app.use(express.static(__dirname))
-app.use(express.urlencoded({extended: true}))
 
-mongoose.connect('mongodb://localhost:27017/students')
+dotEnv.config()
+MongoClient.connect(process.env.MONGO_URI)
+.then(()=>{
+  console.log("MongoDB Connected Successfully")
+})
+.catch((err)=>{
+  console.log("error",err)
+})
+
+
+const port = 5000
+
+
+
+mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true})
 const db = mongoose.connection
 db.once('open', ()=>{
-    console.log('Mongodb connection successful')
+    console.log('Mongodb connected')
 })
+
+console.log(process.env)
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`)
+})
+
+
+app.use(express.static(__dirname))
+app.use(express.urlencoded({extended: true}))
 
 const userSchema = new mongoose.Schema({
     Studentdetails: {
@@ -183,6 +205,3 @@ app.post('/post', async (req, res)=>{
     res.send('Application submitted successfully')
 })
 
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`)
-    })
