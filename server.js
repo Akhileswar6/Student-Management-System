@@ -1,6 +1,11 @@
 const express = require('express')
 const dotEnv = require('dotenv')
-const {MongoClient} = require('mongodb')
+
+const {MongoClient} = require('mongodb');
+// const client = new MongoClient(process.env.MONGO_URI, {
+// ssl: true,
+// tlsAllowInvalidCertificates: false
+// });
 
 const mongoose = require('mongoose')
 const app = express()
@@ -15,11 +20,20 @@ MongoClient.connect(process.env.MONGO_URI)
 })
 
 
-const port = 5000
+const port= process.env.PORT || 3012
+const base_url = process.env.BASE_URL || 3012
+
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  ssl: true, // Enable SSL
+  tlsAllowInvalidCertificates: false, // Ensure valid certificates
+});
 
 
 
-mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true})
+
+
 const db = mongoose.connection
 db.once('open', ()=>{
     console.log('Mongodb connected')
@@ -27,8 +41,8 @@ db.once('open', ()=>{
 
 console.log(process.env)
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`)
+app.listen(base_url, () => {
+  console.log(`Server is running on port ${base_url}`)
 })
 
 
