@@ -36,7 +36,7 @@ This is a **Student Management System** built using **Html**, **Css**, **Node.js
 
 ## Setup Instructions
 
-# Prerequisites
+### Prerequisites
 Make sure you have the following installed:
 - Node.js
 - MongoDB (or use MongoDB Atlas for cloud storage)
