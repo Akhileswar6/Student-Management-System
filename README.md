@@ -56,7 +56,7 @@ Create a .env file in the root directory and add the following variables:
 PORT=5000
 MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/<dbname>?retryWrites=true&w=majority
 ```
-Replace username,password, and dbname with your MongoDB Atlas credentials.
+Replace **username**, **password**, and **dbname** with your MongoDB Atlas credentials.
 
 ### 4.Start the Server
 Run the server using the following command:
@@ -71,6 +71,14 @@ The server will start on http://localhost:5000.
 - Fill out the form with student details.
 - Submit the form.
 - The data will be saved to the MongoDB database.
+
+  ### Contributing
+- Contributions are welcome! Follow these steps:
+- Fork the repository.
+- Create a new branch (git checkout -b feature/YourFeatureName).
+- Commit your changes (git commit -m 'Add some feature').
+- Push to the branch (git push origin feature/YourFeatureName).
+- Open a pull request.
 
 
 
