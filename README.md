@@ -72,7 +72,7 @@ The server will start on http://localhost:5000.
 - Submit the form.
 - The data will be saved to the MongoDB database.
 
-  ### Contributing
+### Contributing
 - Contributions are welcome! Follow these steps:
 - Fork the repository.
 - Create a new branch (git checkout -b feature/YourFeatureName).
