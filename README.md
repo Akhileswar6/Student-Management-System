@@ -39,5 +39,47 @@ This is a **Student Management System** built using **Html**, **Css**, **Node.js
 ### 1. Clone the Repository
 
 ```bash
-git clone 
-cd student-management-system
+git clone https://github.com/Akhileswar6/Student-Management-System.git
+cd Student-Management-System
+```
+### 2. Install Dependencies
+Install the required dependencies using npm:
+
+```bash
+npm install
+```
+
+### 3.Set Up Environment Variables
+Create a .env file in the root directory and add the following variables:
+
+```bash
+PORT=5000
+MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/<dbname>?retryWrites=true&w=majority
+```
+Replace <username>, <password>, and <dbname> with your MongoDB Atlas credentials.
+
+### 4.Start the Server
+Run the server using the following command:
+
+```bash
+node server.js
+```
+The server will start on http://localhost:5000.
+
+### Usage
+Open your browser and navigate to http://localhost:5000.
+Fill out the form with student details.
+Submit the form.
+The data will be saved to the MongoDB database.
+
+
+
+
+
+
+
+
+
+
+
+
