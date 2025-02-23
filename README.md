@@ -35,6 +35,7 @@ This project aims to simplify the process of handling student data, making it ac
 - **Frontend**: HTML,CSS
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
+- **Hosting**: https://www.acadvault.tech
 
 ---
 
@@ -60,7 +61,7 @@ Install the required dependencies using npm:
 npm install
 ```
 
-### 3.Set Up Environment Variables
+### 3. Set Up Environment Variables
 Create a .env file in the root directory and add the following variables:
 
 ```bash
@@ -69,7 +70,7 @@ MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/<dbname>?retr
 ```
 Replace **username**, **password**, and **dbname** with your MongoDB Atlas credentials.
 
-### 4.Start the Server
+### 4. Start the Server
 Run the server using the following command:
 
 ```bash
