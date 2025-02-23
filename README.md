@@ -16,7 +16,10 @@ This is a **Student Management System** built using **Html**, **Css**, **Node.js
 
 ### Submission Form
 ![Submission Form](https://github.com/Akhileswar6/Student-Project/blob/bc53a96a8c93f9b1a009d0cafb82c90460ec36cd/images/Screenshot%202025-02-23%20120047.png)
-![1](https://github.com/Akhileswar6/Student-Project/blob/53418b286d317c01897c45a81413bb3d2e95e5fd/images/Screenshot%202025-02-23%20120203.png)
+![](https://github.com/Akhileswar6/Student-Project/blob/53418b286d317c01897c45a81413bb3d2e95e5fd/images/Screenshot%202025-02-23%20120203.png)
+![](https://github.com/Akhileswar6/Student-Project/blob/5865e320af3375f070ff4e1713b9b1742a297db5/images/Screenshot%202025-02-23%20120236.png)
+![]
+1[]
 
 ### Database-Stored Data
 ![Database Data](./images/database-data.png)
