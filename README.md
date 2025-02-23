@@ -21,7 +21,8 @@ This is a **Student Management System** built using **Html**, **Css**, **Node.js
 ![](https://github.com/Akhileswar6/Student-Project/blob/be3e7cedd150f1dd20d8797e3af052b0024c2487/images/Screenshot%202025-02-23%20120352.png)
 
 ### Database-Stored Data
-![Database Data]()
+![Database Data](https://github.com/Akhileswar6/Student-Project/blob/6320c2d01a39af0f48751fb307d33c0a21d3bfee/images/Screenshot%202025-02-23%20120710.png)
+![]()
 
 ---
 
