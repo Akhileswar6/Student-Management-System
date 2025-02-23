@@ -36,7 +36,7 @@ This is a **Student Management System** built using **Html**, **Css**, **Node.js
 
 ## Setup Instructions
 
-- **Prerequisites**
+# Prerequisites
 Make sure you have the following installed:
 - Node.js
 - MongoDB (or use MongoDB Atlas for cloud storage)
@@ -80,15 +80,20 @@ The server will start on http://localhost:5000.
 - The data will be saved to the MongoDB database.
 
 ### Contributing
-- Contributions are welcome! Follow these steps:
+
 - Fork the repository.
 - Create a new branch (git checkout -b feature/YourFeatureName).
 - Commit your changes (git commit -m 'Add some feature').
 - Push to the branch (git push origin feature/YourFeatureName).
 - Open a pull request.
 
+### License
+- This project is licensed under the MIT License.
 
 
+### Contact
+
+- For any queries, reach out to [your email or GitHub profile].
 
 
 
