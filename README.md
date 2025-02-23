@@ -15,7 +15,7 @@ This is a **Student Management System** built using **Html**, **Css**, **Node.js
 ## Screenshots
 
 ### Submission Form
-![Submission Form](C:\Users\akhil\OneDrive\Hình ảnh\Screenshots 1\Screenshot 2025-02-23 110243.png)
+![Submission Form](images/Screenshot 2025-02-23 120047.png)
 
 ### Database-Stored Data
 ![Database Data](./images/database-data.png)
