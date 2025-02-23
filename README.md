@@ -56,7 +56,7 @@ Create a .env file in the root directory and add the following variables:
 PORT=5000
 MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/<dbname>?retryWrites=true&w=majority
 ```
-Replace <username>, <password>, and <dbname> with your MongoDB Atlas credentials.
+Replace username,password, and dbname with your MongoDB Atlas credentials.
 
 ### 4.Start the Server
 Run the server using the following command:
@@ -67,10 +67,10 @@ node server.js
 The server will start on http://localhost:5000.
 
 ### Usage
-Open your browser and navigate to http://localhost:5000.
-Fill out the form with student details.
-Submit the form.
-The data will be saved to the MongoDB database.
+- Open your browser and navigate to http://localhost:5000.
+- Fill out the form with student details.
+- Submit the form.
+- The data will be saved to the MongoDB database.
 
 
 
