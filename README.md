@@ -93,7 +93,8 @@ The server will start on http://localhost:5000.
 
 ### Contact
 
-- For any queries, reach out to [your email or GitHub profile].
+- For any queries, reach out to [akhilkamale@gmail.com]
+- Github Profile [https://github.com/Akhileswar6]
 
 
 
